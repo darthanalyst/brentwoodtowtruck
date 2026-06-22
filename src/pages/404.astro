@@ -1,0 +1,35 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+---
+<Base
+  title="Page Not Found | Brentwood Tow Truck"
+  description="That page could not be found. Call Brentwood Tow Truck for 24/7 towing and roadside assistance in Brentwood, CA."
+  path="/404/"
+>
+  <section class="page-hero"><div class="wrap" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">404</p>
+    <h1>That page took a wrong turn</h1>
+    <p class="lede" style="margin:0 auto">The page you were looking for is not here. But if you need a tow or roadside help in Brentwood, you are one call away.</p>
+    <div class="hero-cta" style="justify-content:center;margin-top:1.4em">
+      <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+      <a class="btn btn-ghost btn-lg" href="/">Back to Home</a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:10px"><div class="wrap">
+    <div class="sec-head center"><p class="eyebrow" style="justify-content:center">Popular</p><h2>Find what you need</h2></div>
+    <div class="svc-grid">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-ic"><svg><use href={"#" + s.icon}/></svg></div>
+          <span class="svc-klass">{s.klass}</span>
+          <h3>{s.name}</h3>
+          <p>{s.blurb}</p>
+          <span class="svc-more">Learn more <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+</Base>

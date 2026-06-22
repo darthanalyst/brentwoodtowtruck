@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const posts = [
+  {
+    url: "/brentwood-towing-tips-what-to-do-when-your-car-breaks-down/",
+    title: "Brentwood towing tips: what to do when your car breaks down",
+    date: "2026-01-15",
+    dateLabel: "January 15, 2026",
+    excerpt: "A breakdown on Highway 4 or a side street off Balfour is stressful. Here is a calm, step-by-step guide to staying safe and getting help fast in Brentwood.",
+  },
+];
+const schema = [breadcrumb([{ name: "Home", url: "/" }, { name: "Blog", url: "/blog/" }])];
+---
+<Base
+  title="Brentwood Towing Blog | Tips & Local Driving Advice"
+  description="Towing tips, roadside safety, and local driving advice for Brentwood, CA and East Contra Costa from Brentwood Tow Truck."
+  path="/blog/"
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span>Blog</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Blog · Brentwood, CA</p>
+    <h1>Tips and local driving advice</h1>
+    <p class="lede">Practical roadside and towing advice for drivers around Brentwood and the East County towns.</p>
+  </div></section>
+
+  <section style="padding-top:24px"><div class="wrap">
+    <div class="svc-grid">
+      {posts.map((p) => (
+        <a class="svc-card" href={p.url}>
+          <span class="svc-klass">{p.dateLabel}</span>
+          <h3>{p.title}</h3>
+          <p>{p.excerpt}</p>
+          <span class="svc-more">Read more <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>Need help on the road now?</h2>
+    <p>Skip the reading and call. A local operator is on dispatch 24/7 across Brentwood and East County.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>

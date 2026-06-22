@@ -1,0 +1,31 @@
+---
+import Geo from "../components/Geo.astro";
+import { AREAS } from "../lib/site.js";
+const area = AREAS.find((a) => a.url === "/antioch-ca/");
+const roads = [
+  { road: "Highway 4", note: "The freeway link between Antioch and Brentwood" },
+  { road: "Lone Tree Way", note: "The retail corridor at the city line" },
+  { road: "Hillcrest Ave", note: "North toward the Antioch waterfront" },
+  { road: "Somersville Rd", note: "Past the mall and Highway 4" },
+];
+const faqs = [
+  { q: "Do you tow in Antioch as well as Brentwood?", a: "Yes. Antioch sits right next to Brentwood along Highway 4, so a local operator covers it as part of the same East County service area, day and night." },
+  { q: "How fast can you reach Antioch?", a: "Antioch is a short run up Highway 4 or Lone Tree Way from Brentwood. You get a time estimate when you call, based on your exact spot and traffic." },
+];
+---
+<Geo
+  area={area}
+  title="Tow Truck in Antioch, CA | 24/7 Towing & Roadside"
+  description="24/7 towing and roadside assistance in Antioch, CA. A local operator covers Antioch and the Highway 4 corridor from nearby Brentwood. Call (925) 220-8422."
+  hero="/images/area-brentwood.webp"
+  heroAlt="Tow truck on a road in the Antioch and Brentwood, CA area"
+  lede="Towing, recovery, and roadside help across Antioch, CA, dispatched from nearby Brentwood and covering the whole Highway 4 corridor."
+  roads={roads}
+  faqs={faqs}
+>
+  <h2>Towing and roadside assistance in Antioch</h2>
+  <p>Antioch and Brentwood share the same East County backbone, Highway 4, so a local operator working Brentwood is rarely far from Antioch. Whether you break down near the Somersville Towne Center, on Lone Tree Way, or along the Antioch stretch of Highway 4, one call brings a tow truck your way.</p>
+  <p>Antioch traffic on Highway 4 can be heavy at commute times, which is exactly when breakdowns and fender-benders pile up. A local operator knows the on-ramps and the surface-street shortcuts that get a truck to you without sitting in the same jam.</p>
+  <h3>Help across the Antioch area</h3>
+  <p>From a dead battery in a driveway to a tow after a collision, the full range of service covers Antioch: vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery. Tell the operator where you are and what the vehicle is doing, and the right truck is sent with an upfront estimate.</p>
+</Geo>

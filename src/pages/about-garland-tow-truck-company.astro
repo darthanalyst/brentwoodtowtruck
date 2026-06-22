@@ -1,0 +1,45 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [breadcrumb([{ name: "Home", url: "/" }, { name: "About", url: "/about-garland-tow-truck-company/" }])];
+---
+<Base
+  title="About Brentwood Tow Truck | Local 24/7 Towing in Brentwood, CA"
+  description="How Brentwood Tow Truck connects drivers with local 24/7 tow operators across Brentwood, CA 94513 and East Contra Costa. Call (925) 220-8422."
+  path="/about-garland-tow-truck-company/"
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span>About</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">About · Brentwood, CA 94513</p>
+    <h1>Local towing help, built around Brentwood</h1>
+    <p class="lede">Brentwood Tow Truck is the fast way to reach a local tow operator when your vehicle leaves you stranded anywhere in Brentwood or the nearby East County towns.</p>
+    <div class="hero-cta"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a></div>
+  </div></section>
+
+  <section style="padding-top:30px"><div class="wrap"><div class="prose" style="max-width:780px;margin:0 auto">
+    <h2>What we do</h2>
+    <p>When you call Brentwood Tow Truck, you are connected with a local tow operator working the Brentwood area. The idea is simple: one easy-to-remember number that puts a real truck on the road instead of leaving you scrolling through listings on the shoulder of Highway 4 with your hazards on.</p>
+    <p>Brentwood has grown from a quiet farm town into one of the fastest-growing cities in Contra Costa County, and the roads have filled up to match. Highway 4 and its Bypass, Vasco Road, Balfour Road, and Brentwood Blvd carry more cars every year, and more cars mean more breakdowns, flats, dead batteries, and lockouts. A local operator who already knows these roads is the difference between a short wait and a long one.</p>
+
+    <h2>Local knowledge, not a call center halfway across the state</h2>
+    <p>The operators reached through this line work East County. They know that Balfour Road feeds the freeway interchange, that the Streets of Brentwood sit where Sand Creek meets Highway 4, and that the newer subdivisions off the Bypass can be hard to find if you are coming from out of the area. That familiarity means a truck takes the direct route to you and gives you a realistic time estimate.</p>
+
+    <h2>Straightforward from the first call</h2>
+    <p>You get an upfront estimate before any truck rolls, based on your vehicle, the distance, and the help you need. No pressure, no vague runaround, just a clear answer and a tow truck on the way. Every job is handled by a licensed and insured local operator who loads and secures your vehicle the right way.</p>
+
+    <h2>Services we connect you with</h2>
+    <p>Whatever the trouble, there is a service for it: {SERVICES.map((s) => s.name).join(", ")}. Each one is available around the clock, every day of the year.</p>
+
+    <h2>Around the clock, every day</h2>
+    <p>Breakdowns do not keep business hours, so neither does dispatch. Whether it is a Monday commute on Highway 4 or a holiday night out toward Discovery Bay, one call connects you with a local operator ready to help. Save the number now so it is there when you need it.</p>
+  </div></div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>Need a tow in Brentwood right now?</h2>
+    <p>A local operator is on dispatch 24/7 across Brentwood and the nearby East County towns.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>
