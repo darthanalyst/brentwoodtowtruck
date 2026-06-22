@@ -1,0 +1,165 @@
+---
+import Base from "../layouts/Base.astro";
+import Scene from "../components/Scene.astro";
+import { SITE, SERVICES, AREAS, NEIGHBORHOODS, CORRIDORS, itemListNode, faqNode } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const faqs = [
+  { q: "How fast can a tow truck reach me in Brentwood?", a: "It depends where you are and what traffic on Highway 4 looks like, but a local operator is usually close. Most of Brentwood sits within a short run of Highway 4, Balfour Road, and Brentwood Blvd, and once you call we give you a time estimate based on your spot." },
+  { q: "Do you cover my Brentwood neighborhood?", a: "Yes. Coverage runs across every Brentwood community, including Deer Ridge, Shadow Lakes, Trilogy at The Vineyards, Summerset, Garin Ranch, Apple Hill, Rose Garden, and the newer phases out toward the Highway 4 Bypass and Sand Creek Road." },
+  { q: "What does a tow cost in Brentwood?", a: "Price depends on the vehicle, the distance, and the type of help you need. You get an upfront estimate over the phone before any truck rolls, so there are no surprises when help arrives." },
+  { q: "Are you available at night and on weekends?", a: "Yes. Dispatch runs 24 hours a day, 7 days a week, including holidays. A breakdown at 2 a.m. on Vasco Road gets the same response as one at noon." },
+  { q: "Which towns near Brentwood do you serve?", a: "Beyond Brentwood itself, coverage reaches Antioch, Oakley, Discovery Bay, Byron, and Pittsburg, plus the smaller Delta communities in between along the Highway 4 corridor." },
+  { q: "What kinds of vehicles can you tow?", a: "Cars, pickups, SUVs, vans, and motorcycles are all handled on a flatbed or wheel-lift. Tell us the make and situation when you call and the right truck is sent." },
+];
+const schema = [itemListNode(SERVICES), faqNode(faqs)];
+---
+<Base
+  title="Brentwood Tow Truck | 24/7 Tow Truck & Roadside Help in Brentwood, CA"
+  description="Local 24/7 towing, vehicle recovery, and roadside assistance across Brentwood, CA 94513. Fast tow trucks to every Brentwood community and the nearby East Contra Costa towns. Call (925) 220-8422."
+  path="/"
+  schema={schema}
+>
+  <section class="hero"><div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Brentwood, CA · 94513 · Open 24/7</p>
+        <h1>Brentwood's local tow truck, minutes down Highway 4</h1>
+        <p class="lede">Broken down on Highway 4, stuck off Balfour Road, or need a tow from your own driveway? One call puts a local Brentwood operator on the way, day or night.</p>
+        <div class="hero-cta">
+          <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+          <a class="btn btn-ghost btn-lg" href="/services/">See Services</a>
+        </div>
+        <div class="trust-row">
+          <span><svg><use href="#i-clock"/></svg> 24/7, day or night</span>
+          <span><svg><use href="#i-pin"/></svg> Every Brentwood community</span>
+          <span><svg><use href="#i-shield"/></svg> Licensed &amp; insured</span>
+        </div>
+      </div>
+
+      <div class="routes-panel">
+        <div class="rp-head"><b>East County coverage</b><span class="mono-tiny">CA · 94513</span></div>
+        <svg class="rp-ridge" viewBox="0 0 400 34" preserveAspectRatio="none" role="img" aria-label="Stylized Mount Diablo horizon over Brentwood">
+          <path d="M0 34 L0 24 L46 19 L96 25 L150 12 L168 5 L188 13 L240 26 L286 17 L330 23 L370 15 L400 21 L400 34 Z" fill="#5E6B39"/>
+          <path d="M150 12 L168 5 L188 13 Z" fill="#41492a"/>
+          <circle cx="338" cy="11" r="5" fill="#C2871F"/>
+        </svg>
+        <div class="rp-body">
+          <p class="mono-tiny" style="margin:8px 0 2px">The three ways into Brentwood</p>
+          {CORRIDORS.map((c) => (
+            <div class="route-row">
+              <span class="shield">{c.shield}</span>
+              <div><div class="rr-name">{c.road}</div><div class="rr-along">{c.along}</div></div>
+            </div>
+          ))}
+          <div class="rp-foot">
+            <span class="mono-tiny">Hwy 4 · Vasco · Balfour · Brentwood Blvd</span>
+            <a href={tel}>Call now &#8594;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="localstrip"><div class="wrap">
+    <b>Minutes from</b>
+    <span>Downtown City Park</span><span class="sep">·</span>
+    <span>Streets of Brentwood</span><span class="sep">·</span>
+    <span>Marsh Creek Trail</span><span class="sep">·</span>
+    <span>Liberty High School</span><span class="sep">·</span>
+    <span>Highway 4 &amp; Balfour</span>
+  </div></div>
+
+  <section><div class="wrap">
+    <div class="sec-head"><p class="eyebrow">What we do</p><h2>Tow truck and roadside assistance in Brentwood, CA</h2><p>Six core services, every one dispatched from right here in the Brentwood area so help does not have to drive in from Concord or Walnut Creek.</p></div>
+    <div class="svc-grid">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-ic"><svg><use href={"#" + s.icon}/></svg></div>
+          <span class="svc-klass">{s.klass}</span>
+          <h3>{s.name}</h3>
+          <p>{s.blurb}</p>
+          <span class="svc-more">Learn more <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <div class="ridge"><svg viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><circle cx="1006" cy="12" r="6" fill="#C2871F"/><polyline points="0,38 110,31 230,34 330,20 430,29 540,12 650,27 760,17 880,30 1000,21 1110,31 1200,26" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+
+  <section class="tint"><div class="wrap">
+    <div class="comm-intro">
+      <div>
+        <p class="eyebrow">Hometown coverage</p>
+        <h2>We roll to every Brentwood community</h2>
+      </div>
+      <p>From the golf-course streets of Shadow Lakes and Deer Ridge to the 55+ neighborhoods at Trilogy and Summerset and the newer phases on the south and east sides, a local operator knows the way without a map app.</p>
+    </div>
+    <div class="comm-grid">
+      {NEIGHBORHOODS.map((n) => (
+        <div class="comm-card">
+          <span class="cc-pin"><svg><use href="#i-pin"/></svg></span>
+          <div><b>{n.name}</b><span>{n.note}</span></div>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="split">
+      <div class="prose">
+        <p class="eyebrow">Local to Brentwood</p>
+        <h2>A tow company that actually knows East County</h2>
+        <p class="lead-p">Brentwood has grown fast from farm town to commuter city, and the roads have grown with it. A local operator keeps up with all of it.</p>
+        <p>When you are stranded, the last thing you want is a truck crawling out from Concord on Highway 4 while you wait on the shoulder. Calling Brentwood Tow Truck connects you with a tow operator who already works this town, who knows that Balfour Road feeds the freeway interchange, that Vasco Road runs south toward Livermore and I-580, and that the Streets of Brentwood sit right where Sand Creek meets Highway 4.</p>
+        <p>That local knowledge shows up as a shorter wait. Whether you are parked at Downtown City Park, stuck at a light on Brentwood Blvd, or sitting in a driveway in Deer Ridge with a car that will not start, help comes from nearby and gets to you quickly.</p>
+        <p>Every job is handled by a licensed and insured local operator, with an upfront estimate before any truck rolls. No pressure, no runaround, just a straight answer and a tow truck on the way.</p>
+        <a class="btn btn-wine btn-lg" href="/about-garland-tow-truck-company/">More about us <svg style="width:1.1em;height:1.1em;fill:none;stroke:currentColor"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="media"><Scene label="Brentwood, CA" /></div>
+    </div>
+  </div></section>
+
+  <section class="wine-band"><div class="wrap">
+    <div class="sec-head center"><p class="eyebrow" style="justify-content:center">How a call works</p><h2>Simple, local, and fast</h2></div>
+    <div class="steps">
+      <div class="step" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)"><h3 style="color:#fff">Call and tell us where</h3><p style="color:#F0DCD8">A Highway 4 exit, an address off Balfour, or just your community. Tell us what the vehicle is doing and we take it from there.</p></div>
+      <div class="step" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)"><h3 style="color:#fff">A local operator rolls</h3><p style="color:#F0DCD8">The nearest available Brentwood tow operator heads out with the right truck and gives you an honest time estimate.</p></div>
+      <div class="step" style="background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)"><h3 style="color:#fff">Hooked up and home</h3><p style="color:#F0DCD8">Your vehicle is loaded with care and taken where you want it, a shop in Brentwood, your driveway, or anywhere close by.</p></div>
+    </div>
+  </div></section>
+
+  <section class="tint"><div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Beyond Brentwood</p><h2>Nearby East County towns we cover</h2><p>Brentwood sits in the middle of a fast-growing stretch of Highway 4. Coverage reaches the Delta towns right around it.</p></div>
+    <div class="area-grid">
+      {AREAS.map((a) => (
+        <a class="area-card" href={a.url}>
+          <span class="pin"><svg><use href="#i-pin"/></svg></span>
+          <span><b>{a.name}, CA</b><span class="mono-tiny">Towing &amp; roadside</span></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-head center"><p class="eyebrow" style="justify-content:center">Why neighbors call</p><h2>What you get with a local call</h2></div>
+    <div class="feature-grid">
+      <div class="feat"><span class="fi"><svg><use href="#i-clock"/></svg></span><div><h3>Around-the-clock dispatch</h3><p>Day, night, weekend, or holiday, the phone is answered and a truck is sent. Breakdowns do not keep business hours.</p></div></div>
+      <div class="feat"><span class="fi"><svg><use href="#i-pin"/></svg></span><div><h3>Brentwood roads, memorized</h3><p>A local operator knows the shortcuts, the new subdivisions, and which Highway 4 exit gets to you fastest.</p></div></div>
+      <div class="feat"><span class="fi"><svg><use href="#i-shield"/></svg></span><div><h3>Licensed and insured</h3><p>Your vehicle is handled by a properly licensed and insured local operator, loaded and secured the right way.</p></div></div>
+      <div class="feat"><span class="fi"><svg><use href="#i-bolt"/></svg></span><div><h3>Upfront estimates</h3><p>You hear the price before a truck rolls. No surprise add-ons once help shows up at your door.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="tint"><div class="wrap">
+    <div class="sec-head center"><p class="eyebrow" style="justify-content:center">Questions</p><h2>Brentwood towing FAQ</h2></div>
+    <div class="faq-list">
+      {faqs.map((f) => (<details class="faq-item"><summary>{f.q}</summary><p>{f.a}</p></details>))}
+    </div>
+  </div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>One call. A tow truck on the way.</h2>
+    <p>Towing, recovery, and roadside help across Brentwood, CA and the nearby East County towns, 24 hours a day, 7 days a week.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>
