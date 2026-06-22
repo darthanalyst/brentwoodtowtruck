@@ -1,0 +1,39 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/roadside-assistance-brentwood-ca/");
+const faqs = [
+  { q: "What counts as roadside assistance?", a: "It is the help you need when the vehicle is stuck but does not necessarily need a tow: a jump start, a tire change, a lockout, or a bit of fuel. If the problem turns out to be bigger, the same operator can switch to a tow." },
+  { q: "How quickly can someone reach me in Brentwood?", a: "Most of Brentwood is a short run from Highway 4, Balfour Road, and Brentwood Blvd, so a local operator is usually close. You get a time estimate when you call, based on your location and current traffic." },
+  { q: "Can you help if I am stranded on Highway 4?", a: "Yes. A breakdown on the freeway or the Bypass is a priority because the shoulder is no place to wait. Stay buckled with hazards on and a local operator will get to you as fast as conditions allow." },
+  { q: "Do you offer roadside help at night?", a: "Yes. Dispatch runs 24 hours a day, including weekends and holidays. A dead battery at midnight in a Shadow Lakes driveway gets the same response as one at noon." },
+];
+---
+<ServicePage
+  service={service}
+  title="Roadside Assistance in Brentwood, CA"
+  description="24/7 emergency roadside assistance in Brentwood, CA. Jump starts, tire changes, lockouts, and fuel delivery across Brentwood and East Contra Costa. Call (925) 220-8422."
+  hero="/images/svc-roadside.webp"
+  heroAlt="Tow truck stopped to help a vehicle on the shoulder near Brentwood, CA"
+  lede="Stuck on the shoulder of Highway 4 or a side street off Balfour Road? A local operator brings the jump, the tire, the key, or the fuel to get you moving again."
+  faqs={faqs}
+>
+  <h2>Fast roadside help across Brentwood</h2>
+  <p>Not every roadside problem needs a tow. Sometimes you just need a jump, a spare put on, a door opened, or a couple gallons of fuel to reach a station. Roadside assistance covers all of it, and one call to Brentwood Tow Truck puts a local operator on the way with the right tools in the truck.</p>
+  <p>Being stuck on the side of the road feels worse the longer it drags on, especially on a busy stretch like Highway 4 or Lone Tree Way where traffic does not slow down. The goal is simple: reach you quickly, sort the problem on the spot when possible, and get you back on your way.</p>
+
+  <h3>What roadside assistance includes</h3>
+  <ul>
+    <li><strong>Jump starts</strong> for a dead battery in a driveway, a parking lot, or on the shoulder.</li>
+    <li><strong>Flat tire changes</strong>, swapping your spare on so you can reach a tire shop.</li>
+    <li><strong>Lockout help</strong> when the keys are sitting on the seat and the doors are locked.</li>
+    <li><strong>Fuel delivery</strong> when the gauge hits empty before the next station.</li>
+    <li><strong>Minor recovery</strong>, like a vehicle that has slipped off a driveway edge or into a shallow ditch.</li>
+  </ul>
+
+  <h3>Local operators who know Brentwood</h3>
+  <p>A driver who already works Brentwood does not need to puzzle out where you are. They know that Balfour Road feeds the Highway 4 interchange, that Vasco Road heads south toward Livermore, and that the newer neighborhoods off Sand Creek and the Bypass can be easy to miss if you are coming from out of town. That familiarity is the difference between a long wait and a quick one.</p>
+
+  <h3>One call, then a plan</h3>
+  <p>When you call, describe what is happening and where you are, a Highway 4 exit, a cross street, or a community name like Garin Ranch or Rose Garden. The operator gives you an honest time estimate and, if the trouble turns out to be more than a quick fix, the same truck can tow you to a shop. No second call, no second company.</p>
+</ServicePage>

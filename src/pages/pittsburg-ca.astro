@@ -1,0 +1,31 @@
+---
+import Geo from "../components/Geo.astro";
+import { AREAS } from "../lib/site.js";
+const area = AREAS.find((a) => a.url === "/pittsburg-ca/");
+const roads = [
+  { road: "Highway 4", note: "The freeway link to Antioch and Brentwood" },
+  { road: "Railroad Ave", note: "Into central Pittsburg" },
+  { road: "Loveridge Rd", note: "Connector to Highway 4" },
+  { road: "Bailey Rd", note: "West toward the county line" },
+];
+const faqs = [
+  { q: "Do you serve Pittsburg?", a: "Yes. Pittsburg sits west of Antioch along Highway 4, within the East County area a local operator covers from Brentwood, 24 hours a day." },
+  { q: "How long does it take to reach Pittsburg from Brentwood?", a: "It depends on Highway 4 traffic, but a local operator gives you a time estimate when you call based on your location and current conditions." },
+];
+---
+<Geo
+  area={area}
+  title="Tow Truck in Pittsburg, CA | 24/7 Towing & Roadside"
+  description="24/7 towing and roadside assistance in Pittsburg, CA. A local operator covers Pittsburg and the Highway 4 corridor from the Brentwood area. Call (925) 220-8422."
+  hero="/images/area-brentwood.webp"
+  heroAlt="Tow truck on a road in the Pittsburg and Brentwood, CA area"
+  lede="Towing, recovery, and roadside help across Pittsburg, CA, dispatched from the Brentwood area and covering the Highway 4 corridor."
+  roads={roads}
+  faqs={faqs}
+>
+  <h2>Towing and roadside assistance in Pittsburg</h2>
+  <p>Pittsburg anchors the western end of the East County Highway 4 corridor, and a local operator covering Brentwood reaches it along the same freeway. From Railroad Avenue downtown to the neighborhoods off Bailey Road and Loveridge, one call brings a tow truck for a breakdown, a collision, or a quick roadside fix.</p>
+  <p>Highway 4 through Pittsburg carries steady commuter traffic, and the BART and rail crossings add their own snarls. A local operator knows the routes that get a truck to you without sitting in the worst of it.</p>
+  <h3>Help across the Pittsburg area</h3>
+  <p>Vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery all cover Pittsburg. Tell the operator your location and what the vehicle is doing, and the right truck is dispatched with an upfront estimate before any work starts.</p>
+</Geo>

@@ -1,0 +1,39 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/towing-and-vehicle-recovery-brentwood-ca/");
+const faqs = [
+  { q: "What types of vehicles can you tow in Brentwood?", a: "Cars, pickups, SUVs, vans, and motorcycles are all handled on a flatbed or wheel-lift. For lowered, all-wheel-drive, or non-running vehicles, a flatbed keeps the wheels off the ground so nothing is damaged on the way." },
+  { q: "Can you tow after a collision on Highway 4?", a: "Yes. A local operator can clear a disabled or damaged vehicle from the freeway, the Bypass, or a surface street and move it to a body shop, your home, or a storage yard. Tell us what happened and the right truck is sent." },
+  { q: "Where will you take my vehicle?", a: "Wherever you want it within reason, a repair shop in Brentwood, a dealership, your driveway, or a nearby town. You set the destination when you call and the price is quoted upfront." },
+  { q: "Do you do long-distance towing out of Brentwood?", a: "Yes. Local hauls around East County are the bread and butter, but a longer tow to the greater Bay Area or beyond can be arranged. Give us the pickup and drop-off and you get a flat estimate before the truck rolls." },
+];
+---
+<ServicePage
+  service={service}
+  title="Towing & Vehicle Recovery in Brentwood, CA"
+  description="24/7 towing and vehicle recovery in Brentwood, CA. Flatbed and wheel-lift for cars, trucks, SUVs, and motorcycles across Brentwood and East Contra Costa. Call (925) 220-8422."
+  hero="/images/svc-towing.webp"
+  heroAlt="Flatbed tow truck loading a sedan on a Brentwood, CA street"
+  lede="Flatbed and wheel-lift towing for cars, trucks, SUVs, and motorcycles, anywhere in Brentwood and the surrounding East County towns, around the clock."
+  faqs={faqs}
+>
+  <h2>Local towing across Brentwood and East County</h2>
+  <p>A breakdown does not wait for a good time. It happens on the morning crawl up Highway 4, in the Streets of Brentwood parking lot, or in your own driveway in Deer Ridge on a Sunday night. When it does, one call to Brentwood Tow Truck connects you with a local tow operator who can hook your vehicle and get it where it needs to go.</p>
+  <p>Towing and vehicle recovery is the core of what a local operator does. That means a flatbed or wheel-lift truck dispatched to your spot, a careful hook-up, and a safe haul to the destination you choose. Cars, pickups, SUVs, vans, and motorcycles are all covered, and a flatbed is on hand for lowered, all-wheel-drive, and non-running vehicles that cannot be dragged on their tires.</p>
+
+  <h3>When you need a tow in Brentwood</h3>
+  <p>Some calls are emergencies and some are just inconvenient. A local operator handles both, including:</p>
+  <ul>
+    <li><strong>Breakdowns</strong> on Highway 4, the Bypass, Vasco Road, or a side street off Balfour where the engine quits or the transmission gives out.</li>
+    <li><strong>Collision recovery</strong> after a wreck, clearing the vehicle from the road and moving it to a body shop or storage.</li>
+    <li><strong>Non-running vehicles</strong> that need to get from a driveway in Summerset or Trilogy to a repair shop.</li>
+    <li><strong>Private transport</strong> when you buy or sell a vehicle and need it moved across town or to a nearby Delta community.</li>
+  </ul>
+
+  <h3>Flatbed and wheel-lift, the right tool for the job</h3>
+  <p>A flatbed tilts down so the whole vehicle rides on the deck, which is the safest option for newer cars, low-clearance vehicles, and anything that will not roll. A wheel-lift is quicker and works well for standard cars in tight spots, like a packed lot near Downtown City Park or a narrow street in an older Brentwood neighborhood. The operator brings the truck that fits your vehicle and your situation.</p>
+
+  <h3>Upfront pricing, no surprises</h3>
+  <p>Before any truck rolls, you get an estimate based on the vehicle, the distance, and the type of tow. That holds whether you are a few blocks from Brentwood Blvd or out past Marsh Creek Road toward the ranch country. Call, describe what you are driving and where it needs to go, and a local operator points the nearest truck your way.</p>
+</ServicePage>

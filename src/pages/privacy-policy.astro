@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [breadcrumb([{ name: "Home", url: "/" }, { name: "Privacy Policy", url: "/privacy-policy/" }])];
+---
+<Base
+  title="Privacy Policy | Brentwood Tow Truck"
+  description="The privacy policy for Brentwood Tow Truck, covering how information is handled when you contact us for towing and roadside assistance in Brentwood, CA."
+  path="/privacy-policy/"
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span>Privacy Policy</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Privacy</p>
+    <h1>Privacy Policy</h1>
+    <p class="lede">How information is handled when you contact Brentwood Tow Truck for towing and roadside help.</p>
+  </div></section>
+
+  <section style="padding-top:24px"><div class="wrap"><div class="prose" style="max-width:780px;margin:0 auto">
+    <p>This privacy policy explains how Brentwood Tow Truck handles information when you reach out for towing or roadside assistance. By contacting us, you agree to the practices described here.</p>
+
+    <h2>Information we collect</h2>
+    <p>When you call or message us, we may collect the details you provide so we can dispatch help: your name, phone number, vehicle location, and a description of the problem and your vehicle. We only ask for what is needed to send the right truck to the right place.</p>
+
+    <h2>How we use information</h2>
+    <p>Information you share is used to connect you with a local tow operator, coordinate your service, and follow up if needed. We do not sell your personal information.</p>
+
+    <h2>Sharing with service providers</h2>
+    <p>To get help to you, your service details may be shared with the local tow operator handling your call. These providers use the information only to locate you and complete the requested service.</p>
+
+    <h2>Calls and communications</h2>
+    <p>By calling or messaging the number on this site, you consent to be contacted back at that number about your request. Standard message and data rates may apply for any text communications.</p>
+
+    <h2>Cookies and website analytics</h2>
+    <p>This website may use basic cookies and analytics to understand how visitors use the site and to improve it. You can set your browser to refuse cookies, though some features may not work as intended.</p>
+
+    <h2>Third-party links</h2>
+    <p>Our site may link to other websites. We are not responsible for the privacy practices of those sites, and we encourage you to review their policies.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time. Any changes will be posted on this page.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Call <a href={tel} style="color:var(--wine);font-weight:700">{SITE.phoneDisplay}</a> or email <a href={"mailto:" + SITE.email} style="color:var(--wine);font-weight:700">{SITE.email}</a>.</p>
+  </div></div></section>
+</Base>

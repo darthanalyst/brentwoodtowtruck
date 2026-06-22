@@ -1,0 +1,56 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES, AREAS, itemListNode, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [
+  itemListNode(SERVICES),
+  breadcrumb([{ name: "Home", url: "/" }, { name: "Services", url: "/services/" }]),
+];
+---
+<Base
+  title="Towing & Roadside Services in Brentwood, CA | Brentwood Tow Truck"
+  description="The full list of 24/7 towing and roadside services in Brentwood, CA: vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery. Call (925) 220-8422."
+  path="/services/"
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span>Services</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Services · Brentwood, CA 94513</p>
+    <h1>Towing &amp; roadside services in Brentwood</h1>
+    <p class="lede">Six core services, dispatched 24/7 from right here in the Brentwood area. Whatever the trouble, one call connects you with a local tow operator.</p>
+    <div class="hero-cta">
+      <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:30px"><div class="wrap">
+    <div class="svc-grid">
+      {SERVICES.map((s) => (
+        <a class="svc-card" href={s.url}>
+          <div class="svc-ic"><svg><use href={"#" + s.icon}/></svg></div>
+          <span class="svc-klass">{s.klass}</span>
+          <h3>{s.name}</h3>
+          <p>{s.blurb}</p>
+          <span class="svc-more">Learn more <svg><use href="#i-arrow"/></svg></span>
+        </a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="tint"><div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Where we work</p><h2>Brentwood and the nearby East County towns</h2><p>Based in Brentwood and covering the Delta communities right around it.</p></div>
+    <div class="area-grid">
+      <a class="area-card" href="/"><span class="pin"><svg><use href="#i-home"/></svg></span><span><b>Brentwood, CA</b><span class="mono-tiny">Home base · 94513</span></span></a>
+      {AREAS.map((a) => (
+        <a class="area-card" href={a.url}><span class="pin"><svg><use href="#i-pin"/></svg></span><span><b>{a.name}, CA</b><span class="mono-tiny">Towing &amp; roadside</span></span></a>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>Not sure which service you need?</h2>
+    <p>Call and describe what is happening. A local operator figures out the right help and gives you an upfront estimate.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>

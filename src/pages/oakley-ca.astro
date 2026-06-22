@@ -1,0 +1,31 @@
+---
+import Geo from "../components/Geo.astro";
+import { AREAS } from "../lib/site.js";
+const area = AREAS.find((a) => a.url === "/oakley-ca/");
+const roads = [
+  { road: "Highway 4", note: "Through Oakley toward Brentwood and Antioch" },
+  { road: "Main Street", note: "Old SR-4 through downtown Oakley" },
+  { road: "Laurel Rd", note: "Connector to the Highway 4 Bypass" },
+  { road: "Cypress Rd", note: "East toward Bethel Island and the Delta" },
+];
+const faqs = [
+  { q: "Is Oakley part of your service area?", a: "Yes. Oakley sits just north of Brentwood along Highway 4, and a local operator covers it as part of the same East County area, 24 hours a day." },
+  { q: "Can you reach the Delta side of Oakley?", a: "Yes, including the areas out Cypress Road toward Bethel Island. Mention your location when you call so the operator can give an accurate time estimate." },
+];
+---
+<Geo
+  area={area}
+  title="Tow Truck in Oakley, CA | 24/7 Towing & Roadside"
+  description="24/7 towing and roadside assistance in Oakley, CA. A local operator covers Oakley and the Highway 4 corridor from nearby Brentwood. Call (925) 220-8422."
+  hero="/images/area-brentwood.webp"
+  heroAlt="Tow truck on a road in the Oakley and Brentwood, CA area"
+  lede="Towing, recovery, and roadside help across Oakley, CA, dispatched from nearby Brentwood and covering Highway 4 and the Delta roads."
+  roads={roads}
+  faqs={faqs}
+>
+  <h2>Towing and roadside assistance in Oakley</h2>
+  <p>Oakley sits between Brentwood and Antioch along Highway 4, with the Delta just to the north. A local operator covering Brentwood reaches Oakley quickly, whether you are downtown on Main Street, out toward Bethel Island on Cypress Road, or on the Highway 4 Bypass.</p>
+  <p>The roads around Oakley mix fast-moving freeway with quiet rural stretches, and both can leave you stranded, the freeway with a breakdown in traffic, the back roads with an empty tank far from a station. Either way, one call gets help on the way.</p>
+  <h3>Help across the Oakley area</h3>
+  <p>Vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery all cover Oakley. Tell the operator your location and what is happening, and a truck heads out with an upfront price quoted before any work begins.</p>
+</Geo>
