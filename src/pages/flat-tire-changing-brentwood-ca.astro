@@ -1,0 +1,33 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/flat-tire-changing-brentwood-ca/");
+const faqs = [
+  { q: "Can you change my tire where I am parked?", a: "Usually, yes. If your spare is good and there is room to work safely, a local operator mounts it right there, on the shoulder of Highway 4, in a driveway, or in a parking lot. If the spot is not safe, the vehicle is moved first." },
+  { q: "What if I do not have a spare?", a: "Then the better move is a tow to a tire shop. A local operator can take your vehicle to a Brentwood tire store or your preferred shop so a new tire can go on." },
+  { q: "Is a flat dangerous to drive on?", a: "Driving on a flat ruins the tire and can damage the wheel and brakes, and it is unsafe at speed. Pull over as soon as it is safe, put on hazards, and call so the spare can go on properly." },
+  { q: "Do you change tires at night?", a: "Yes. Dispatch runs 24 hours a day. A blowout at night on Vasco Road gets the same quick response as one during the day." },
+];
+---
+<ServicePage
+  service={service}
+  title="Flat Tire Changing in Brentwood, CA"
+  description="24/7 flat tire changing in Brentwood, CA. A local operator mounts your spare roadside or tows you to a tire shop across Brentwood and East County. Call (925) 220-8422."
+  hero="/images/svc-tire.webp"
+  heroAlt="Roadside tire change on a vehicle near Brentwood, CA"
+  lede="A blowout on Highway 4 or a slow leak in a Streets of Brentwood lot? A local operator mounts your spare on the spot, or tows you in if the spare will not hold."
+  faqs={faqs}
+>
+  <h2>Roadside tire changes across Brentwood</h2>
+  <p>A flat tire turns an ordinary drive into a roadside stop in seconds. You hear the thump, feel the pull, and suddenly you are looking for a safe place to get off the road. When it happens anywhere in Brentwood, one call brings a local operator who can get your spare on and you back on your way.</p>
+  <p>Changing a tire on the shoulder of a busy road is not the place to wrestle with a jack you have never used. A local operator does it safely and quickly, with the right equipment, so you are not kneeling next to traffic on Lone Tree Way or Highway 4.</p>
+
+  <h3>How a tire change call works</h3>
+  <p>Get the vehicle as far off the road as you safely can, turn on your hazards, and call. Tell the operator where you are and whether you have a usable spare. When the truck arrives, the operator loosens the lugs, lifts the vehicle, swaps the flat for the spare, torques everything down, and checks that the spare is holding air before you leave.</p>
+
+  <h3>When a tow is the better call</h3>
+  <p>Sometimes the spare is missing, already flat, or the wheel is damaged. In that case the smarter move is a quick tow to a tire shop. A local operator can take your vehicle to a Brentwood tire store or the shop you prefer, so a proper replacement goes on instead of limping along on a spare that will not last.</p>
+
+  <h3>A note on spare tires</h3>
+  <p>Most compact and folding spares are rated for short distances and lower speeds, just enough to reach a shop. If you are far out toward Discovery Bay or Byron when the flat hits, mention it on the call so the operator can advise whether to mount the spare or tow you straight to a tire store. Either way, you get an upfront price before any work starts.</p>
+</ServicePage>

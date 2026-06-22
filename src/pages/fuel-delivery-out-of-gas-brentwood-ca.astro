@@ -1,0 +1,33 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/fuel-delivery-out-of-gas-brentwood-ca/");
+const faqs = [
+  { q: "How much fuel do you bring?", a: "Enough to get you to a station and back on your way, typically a few gallons. You do not need a full tank delivered, just enough to reach the nearest pump safely." },
+  { q: "What if my car is diesel?", a: "Let the operator know when you call so the correct fuel is brought. Putting the wrong fuel in a tank causes real damage, so it is worth saying up front whether you need gas or diesel." },
+  { q: "I ran out on Highway 4. Can you reach me?", a: "Yes. Running dry on the freeway or the Bypass is a priority because the shoulder is exposed. Keep your hazards on, stay buckled, and a local operator will bring fuel as fast as conditions allow." },
+  { q: "Is fuel delivery cheaper than a tow?", a: "When the only problem is an empty tank, yes, fuel delivery gets you going without a tow. If the car will not start even with fuel, the issue is something else and a tow may be the better option." },
+];
+---
+<ServicePage
+  service={service}
+  title="Fuel Delivery in Brentwood, CA"
+  description="24/7 emergency fuel delivery in Brentwood, CA. Run out of gas? A local operator brings enough fuel to get you going across Brentwood and East County. Call (925) 220-8422."
+  hero="/images/svc-fuel.webp"
+  heroAlt="Fuel being delivered to a vehicle stopped on the roadside near Brentwood, CA"
+  lede="Gauge on empty out on Vasco Road or heading toward Discovery Bay? A local operator brings enough fuel to get you to the nearest station."
+  faqs={faqs}
+>
+  <h2>Out of gas in Brentwood? Fuel is on the way</h2>
+  <p>Everyone means to stop for gas before the light comes on. Then traffic on Highway 4 backs up, the errand runs long, and the needle drops past empty before you reach a station. When you run dry anywhere around Brentwood, a local operator can bring fuel to you so you are not stranded.</p>
+  <p>The Delta side of East County has long stretches between stations, especially out toward Byron, Discovery Bay, and the ranch roads past Marsh Creek. That is exactly where an empty tank tends to catch up with people. A quick call gets enough fuel delivered to reach the next pump.</p>
+
+  <h3>How fuel delivery works</h3>
+  <p>Call and tell the operator where you are and whether your vehicle takes gas or diesel. A local operator brings enough fuel to get you moving and to the nearest station, where you can fill up properly. It is faster and simpler than walking to a gas station with a can and hoping you measured the distance right.</p>
+
+  <h3>Stay safe while you wait</h3>
+  <p>If you coast to a stop on Highway 4 or another busy road, get as far onto the shoulder as you can, turn on your hazards, and stay in the vehicle with your seatbelt on if traffic is close. Tell the operator you are in an exposed spot so your call is prioritized.</p>
+
+  <h3>When it is not just the fuel</h3>
+  <p>Sometimes a car that sputters out feels like it is empty when the real problem is a fuel pump or another fault. If fuel goes in and the engine still will not run, a local operator can switch to a tow and get you to a shop in Brentwood. Either way, you get an upfront price before anything happens.</p>
+</ServicePage>

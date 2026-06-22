@@ -1,0 +1,31 @@
+---
+import Geo from "../components/Geo.astro";
+import { AREAS } from "../lib/site.js";
+const area = AREAS.find((a) => a.url === "/discovery-bay-ca/");
+const roads = [
+  { road: "Highway 4", note: "The main link to Brentwood and Byron" },
+  { road: "Bixler Rd", note: "North-south through the Discovery Bay area" },
+  { road: "Point of Timber Rd", note: "Connector toward Brentwood" },
+  { road: "Newport Dr", note: "Into the Discovery Bay waterfront community" },
+];
+const faqs = [
+  { q: "Do you cover Discovery Bay?", a: "Yes. Discovery Bay is a short run down Highway 4 from Brentwood, and a local operator serves it as part of the same East County area, around the clock." },
+  { q: "Can you tow from the Discovery Bay waterfront neighborhoods?", a: "Yes, including the streets off Newport Drive and Willow Lake Road. Give the operator your address or nearest cross street for an accurate time estimate." },
+];
+---
+<Geo
+  area={area}
+  title="Tow Truck in Discovery Bay, CA | 24/7 Towing & Roadside"
+  description="24/7 towing and roadside assistance in Discovery Bay, CA. A local operator covers Discovery Bay and the Highway 4 corridor from nearby Brentwood. Call (925) 220-8422."
+  hero="/images/area-brentwood.webp"
+  heroAlt="Tow truck on a road in the Discovery Bay and Brentwood, CA area"
+  lede="Towing, recovery, and roadside help across Discovery Bay, CA, dispatched from nearby Brentwood and covering the Highway 4 and Delta roads."
+  roads={roads}
+  faqs={faqs}
+>
+  <h2>Towing and roadside assistance in Discovery Bay</h2>
+  <p>Discovery Bay sits out where Highway 4 meets the Delta, a waterfront community a short drive from Brentwood. The roads here run long and open, which is great until a breakdown or an empty tank leaves you waiting far from town. A local operator covering Brentwood reaches Discovery Bay along Highway 4 and the connector roads.</p>
+  <p>Because the area is spread out, knowing the local roads matters. An operator who works East County knows Bixler Road, Point of Timber, and the waterfront streets off Newport Drive, so the truck takes the direct route instead of circling.</p>
+  <h3>Help across the Discovery Bay area</h3>
+  <p>Vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery all reach Discovery Bay. Fuel delivery in particular is a common call out here, where stations are few and far between. Call, describe your situation, and a truck is sent with an upfront estimate.</p>
+</Geo>

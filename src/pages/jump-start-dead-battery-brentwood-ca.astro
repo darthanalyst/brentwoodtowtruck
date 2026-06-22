@@ -1,0 +1,33 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/jump-start-dead-battery-brentwood-ca/");
+const faqs = [
+  { q: "How long does a jump start take?", a: "The jump itself is quick, often just a few minutes once the operator is on scene and connected. The main variable is travel time to reach you, which you get as an estimate when you call." },
+  { q: "My battery keeps dying. Should I still get a jump?", a: "A jump gets you moving, but a battery that drains repeatedly may be near the end of its life or have a charging problem. After the jump, have it tested. If it strands you again, a local operator can tow you to a shop." },
+  { q: "Can a jump start damage my car?", a: "Done correctly, no. A local operator connects in the right order and protects the electronics. That is safer than a rushed jump with cables hooked up wrong, which can cause a spark or damage." },
+  { q: "Do you carry batteries?", a: "The focus is getting you started and on your way. If the battery is dead for good, the better option is usually a jump to reach a shop or a tow there, rather than a roadside replacement." },
+];
+---
+<ServicePage
+  service={service}
+  title="Jump Starts & Dead Battery Service in Brentwood, CA"
+  description="24/7 jump start service in Brentwood, CA. A local operator gets your dead battery started in driveways, lots, and roadsides across Brentwood. Call (925) 220-8422."
+  hero="/images/svc-jumpstart.webp"
+  heroAlt="Jump starting a vehicle with a dead battery near Brentwood, CA"
+  lede="Turn the key and hear nothing but a click? A local operator brings a jump to your driveway, the office lot, or wherever the battery quit on you."
+  faqs={faqs}
+>
+  <h2>Dead battery? A jump is on the way</h2>
+  <p>A dead battery has a way of picking the worst moment, a workday morning in a Trilogy driveway, or after a long evening at the Streets of Brentwood when the lot has emptied out. You turn the key, the dash flickers, and the engine will not catch. One call to Brentwood Tow Truck brings a local operator out to jump it.</p>
+  <p>Brentwood summers are hot, and heat is hard on batteries. Add a dome light left on overnight or a battery that is simply old, and you get a no-start. The fix is usually fast once help arrives.</p>
+
+  <h3>What happens on a jump start call</h3>
+  <p>Tell the operator where you are, a home address, a parking lot, or a spot along Brentwood Blvd. When the truck arrives, the operator connects to your battery in the correct order, starts the engine, and makes sure it is running steadily before disconnecting. They will let you know if the battery took the charge cleanly or if it looks like it is on the way out.</p>
+
+  <h3>When it is more than the battery</h3>
+  <p>If the engine starts but the battery dies again soon after, the real problem may be the alternator or the charging system. A jump is still the right first step, it gets you moving, but plan to have the system checked. If the vehicle will not hold a charge at all, a local operator can tow it to a shop in Brentwood instead of leaving you to gamble on reaching one.</p>
+
+  <h3>Safe and quick</h3>
+  <p>A proper jump protects your vehicle's electronics, which is why it is worth having an operator do it rather than flagging down a stranger with frayed cables. You get an upfront price, a quick connection, and a running engine, day or night, anywhere in Brentwood.</p>
+</ServicePage>
