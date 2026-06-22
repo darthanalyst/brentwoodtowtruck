@@ -1,0 +1,31 @@
+---
+import Geo from "../components/Geo.astro";
+import { AREAS } from "../lib/site.js";
+const area = AREAS.find((a) => a.url === "/byron-ca/");
+const roads = [
+  { road: "Vasco Road", note: "South from Brentwood through Byron to I-580" },
+  { road: "Byron Highway", note: "The main route through town" },
+  { road: "Camino Diablo", note: "East-west connector near Byron" },
+  { road: "Highway 4", note: "North toward Discovery Bay and Brentwood" },
+];
+const faqs = [
+  { q: "Is Byron in your service area?", a: "Yes. Byron sits along Vasco Road and Byron Highway south of Brentwood, and a local operator covers it as part of the same East County area, day and night." },
+  { q: "Vasco Road is busy with commuters. Can you still reach me?", a: "Yes. A local operator knows the Vasco Road corridor and the timing of its commute traffic, so a truck takes the best route to reach you with a realistic time estimate." },
+];
+---
+<Geo
+  area={area}
+  title="Tow Truck in Byron, CA | 24/7 Towing & Roadside"
+  description="24/7 towing and roadside assistance in Byron, CA. A local operator covers Byron and the Vasco Road corridor from nearby Brentwood. Call (925) 220-8422."
+  hero="/images/area-brentwood.webp"
+  heroAlt="Tow truck on a rural road in the Byron and Brentwood, CA area"
+  lede="Towing, recovery, and roadside help across Byron, CA, dispatched from nearby Brentwood and covering Vasco Road and Byron Highway."
+  roads={roads}
+  faqs={faqs}
+>
+  <h2>Towing and roadside assistance in Byron</h2>
+  <p>Byron sits south of Brentwood along Vasco Road and Byron Highway, where East County turns to open country on the way to the Altamont and I-580. A local operator covering Brentwood reaches Byron along those same roads, whether you are near the airport, on Camino Diablo, or out on a rural stretch with no station in sight.</p>
+  <p>Vasco Road carries heavy commuter traffic between the Bay Area and East County, and breakdowns on a busy two-lane road need a quick, safe response. A local operator knows the corridor and gets to you without guesswork.</p>
+  <h3>Help across the Byron area</h3>
+  <p>Vehicle recovery, roadside assistance, flat tire changes, jump starts, lockouts, and fuel delivery all cover Byron. The open roads out here make fuel delivery and tire help common calls. Tell the operator where you are and a truck heads out with an upfront price.</p>
+</Geo>

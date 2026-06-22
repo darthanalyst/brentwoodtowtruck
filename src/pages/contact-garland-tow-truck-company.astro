@@ -1,0 +1,59 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, SERVICES, AREAS, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const schema = [breadcrumb([{ name: "Home", url: "/" }, { name: "Contact", url: "/contact-garland-tow-truck-company/" }])];
+---
+<Base
+  title="Contact Brentwood Tow Truck | 24/7 Dispatch in Brentwood, CA"
+  description="Contact Brentwood Tow Truck for 24/7 towing and roadside assistance across Brentwood, CA 94513 and East Contra Costa. Call (925) 220-8422 any time."
+  path="/contact-garland-tow-truck-company/"
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span>Contact</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Contact · Brentwood, CA 94513</p>
+    <h1>Call for a tow, day or night</h1>
+    <p class="lede">The fastest way to get help is to call. One ring connects you with a local Brentwood tow operator who can dispatch a truck to your location.</p>
+    <div class="hero-cta"><a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a></div>
+  </div></section>
+
+  <section style="padding-top:30px"><div class="wrap">
+    <div class="split">
+      <div class="prose">
+        <h2>Reach us</h2>
+        <p>Towing and roadside emergencies move fast, so calling is always quickest. Tell the operator where you are and what the vehicle is doing, and a truck is on the way with a time estimate.</p>
+        <p><strong>Phone:</strong> <a href={tel} style="color:var(--wine);font-weight:700">{SITE.phoneDisplay}</a><br/>
+        <strong>Email:</strong> <a href={"mailto:" + SITE.email} style="color:var(--wine);font-weight:700">{SITE.email}</a><br/>
+        <strong>Hours:</strong> Open 24 hours, 7 days a week, including holidays<br/>
+        <strong>Service area:</strong> Brentwood, CA 94513 and the surrounding East Contra Costa area</p>
+        <h3>When you call, have ready</h3>
+        <ul>
+          <li>Your location, a Highway 4 exit, a cross street, or a community name</li>
+          <li>The make, model, and color of the vehicle</li>
+          <li>What is wrong, a breakdown, flat, dead battery, lockout, or empty tank</li>
+          <li>Whether you are in a safe spot or exposed to traffic</li>
+        </ul>
+      </div>
+      <div class="prose">
+        <h2>Areas we serve</h2>
+        <p>Based in Brentwood and covering the nearby East County towns:</p>
+        <ul>
+          <li><a href="/" style="color:var(--wine);font-weight:600">Brentwood, CA</a></li>
+          {AREAS.map((a) => (<li><a href={a.url} style="color:var(--wine);font-weight:600">{a.name}, CA</a></li>))}
+        </ul>
+        <h2>Services</h2>
+        <ul>
+          {SERVICES.map((s) => (<li><a href={s.url} style="color:var(--wine);font-weight:600">{s.name}</a></li>))}
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>Stranded right now?</h2>
+    <p>Do not wait. One call gets a local tow operator headed your way across Brentwood and East County.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>

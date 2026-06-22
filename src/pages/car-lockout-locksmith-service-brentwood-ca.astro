@@ -1,0 +1,33 @@
+---
+import ServicePage from "../components/ServicePage.astro";
+import { SERVICES } from "../lib/site.js";
+const service = SERVICES.find((s) => s.url === "/car-lockout-locksmith-service-brentwood-ca/");
+const faqs = [
+  { q: "Can you open my car without damaging it?", a: "Yes. A local operator uses proper lockout tools designed to open a door without harming the paint, weatherstripping, or window. It is far safer than a coat hanger or a wedge and a screwdriver." },
+  { q: "My keys are locked in and the car is running. Can you help fast?", a: "Yes, and let us know on the call so it is treated as a priority. A running, locked vehicle is wasting fuel and a concern if a child or pet is inside, so a local operator gets there as quickly as possible." },
+  { q: "Do you make new keys?", a: "Lockout service is about getting you back into your vehicle when the keys are inside or locked away. If the keys are truly lost, the operator can advise on next steps, including a tow to a dealer or locksmith for a replacement." },
+  { q: "Can you reach me in any Brentwood neighborhood?", a: "Yes, from Downtown and Apple Hill to Deer Ridge, Shadow Lakes, Trilogy, and the newer south-side phases. Give the operator your location and a truck heads your way." },
+];
+---
+<ServicePage
+  service={service}
+  title="Car Lockout Service in Brentwood, CA"
+  description="24/7 car lockout service in Brentwood, CA. A local operator opens your locked vehicle without damage across Brentwood and East County. Call (925) 220-8422."
+  hero="/images/svc-lockout.webp"
+  heroAlt="Locked car door being opened with proper lockout tools near Brentwood, CA"
+  lede="Keys locked inside at the trailhead, the grocery lot, or your own driveway? A local operator opens the door with the right tools and no damage."
+  faqs={faqs}
+>
+  <h2>Locked out in Brentwood? We can get you in</h2>
+  <p>It happens to careful people all the time. You set the keys on the seat, shut the door, and hear the locks thunk before you realize what is in your hand. Or you come back to the car at the Marsh Creek trailhead and the keys are glinting in the ignition. A car lockout is frustrating, but it is a quick fix when you call a local operator.</p>
+  <p>Resist the urge to force it. Coat hangers, wedges, and screwdrivers scratch paint, bend door frames, and crack window seals, and the repair costs far more than the lockout. A local operator carries tools made for the job and opens the door cleanly.</p>
+
+  <h3>How a lockout call works</h3>
+  <p>Call and tell the operator where you are and what you are driving. When the truck arrives, the operator uses the right lockout tools to release the lock without harming the vehicle, then you are back in and on your way. Most lockouts are handled in minutes once help is on scene.</p>
+
+  <h3>When a child or pet is inside</h3>
+  <p>A locked vehicle with a child or pet inside is an emergency, especially on a hot Brentwood afternoon. Say so the moment you call so it is treated as urgent, and if the situation looks dangerous, call 911 first. A local operator will get to you as fast as conditions allow.</p>
+
+  <h3>Anywhere in town, any hour</h3>
+  <p>Lockouts do not keep to business hours. Whether it is morning at the Streets of Brentwood, midday at City Park, or late at night in a Summerset driveway, dispatch runs around the clock. You get an upfront price and a careful, damage-free entry, every time.</p>
+</ServicePage>

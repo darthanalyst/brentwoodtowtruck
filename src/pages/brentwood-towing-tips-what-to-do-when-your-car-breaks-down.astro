@@ -1,0 +1,63 @@
+---
+import Base from "../layouts/Base.astro";
+import { SITE, articleNode, breadcrumb } from "../lib/site.js";
+const tel = "tel:" + SITE.phoneTel;
+const url = "/brentwood-towing-tips-what-to-do-when-your-car-breaks-down/";
+const schema = [
+  articleNode({
+    headline: "Brentwood towing tips: what to do when your car breaks down",
+    description: "A step-by-step guide to staying safe and getting help fast when your vehicle breaks down in Brentwood, CA.",
+    url,
+    datePublished: "2026-01-15",
+    dateModified: "2026-01-15",
+  }),
+  breadcrumb([
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog/" },
+    { name: "What to do when your car breaks down", url },
+  ]),
+];
+---
+<Base
+  title="Brentwood Towing Tips: What to Do When Your Car Breaks Down"
+  description="A calm, step-by-step guide to staying safe and getting help fast when your car breaks down in Brentwood, CA, from Highway 4 to the back roads near the Delta."
+  path={url}
+  schema={schema}
+>
+  <div class="wrap"><nav class="crumbs"><a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Breakdown tips</nav></div>
+
+  <section class="page-hero"><div class="wrap">
+    <p class="eyebrow">Blog · January 15, 2026</p>
+    <h1>What to do when your car breaks down in Brentwood</h1>
+    <p class="lede">A breakdown is stressful wherever it happens. These steps help you stay safe and get back on the road quickly, whether you are on Highway 4 or out near the Delta.</p>
+  </div></section>
+
+  <section style="padding-top:30px"><div class="wrap"><div class="prose" style="max-width:780px;margin:0 auto">
+    <h2>1. Get off the road safely</h2>
+    <p>The moment you feel something go wrong, a flat, a loss of power, an overheating engine, signal early and steer toward the right shoulder or the nearest exit. On Highway 4 and the Bypass, traffic moves fast, so it is worth easing onto an off-ramp or a wide shoulder rather than stopping in a lane. On surface streets like Balfour Road or Brentwood Blvd, aim for a parking lot or a quiet side street if you can coast that far.</p>
+
+    <h2>2. Make yourself visible</h2>
+    <p>Turn on your hazard lights right away. If you have a reflective triangle or flares and it is safe to step out, place them behind the vehicle to warn approaching traffic. At night or in the Delta fog that can roll into East County, visibility matters even more.</p>
+
+    <h2>3. Stay in the car when traffic is close</h2>
+    <p>If you are on a busy stretch of Highway 4 or a narrow shoulder, the safest place is usually inside the vehicle with your seatbelt on. Standing next to fast-moving traffic is far more dangerous than waiting inside. If you are in a calm parking lot, it is fine to step out and wait somewhere safe.</p>
+
+    <h2>4. Call for a local tow</h2>
+    <p>Call <a href={tel} style="color:var(--wine);font-weight:700">{SITE.phoneDisplay}</a> and tell the operator where you are and what is happening. Useful details include the nearest Highway 4 exit or cross street, a community name like Deer Ridge or Garin Ranch, the make and color of your vehicle, and whether you are in a safe spot. A local operator uses that to find you quickly and give a realistic time estimate.</p>
+
+    <h2>5. Have the basics ready</h2>
+    <p>While you wait, gather your license, keys, and any items you need from the vehicle. Decide where you want the car taken, a repair shop in Brentwood, a dealership, or your driveway, so you can tell the operator when the truck arrives. Knowing the destination upfront keeps the price clear.</p>
+
+    <h2>Common Brentwood breakdown spots</h2>
+    <p>Some calls come up again and again: dead batteries in driveways across Trilogy and Summerset on hot mornings, flats on Highway 4 and Lone Tree Way, empty tanks out toward Discovery Bay and Byron where stations are sparse, and lockouts at the Streets of Brentwood and the Marsh Creek trailhead. Whatever the trouble, the response is the same, one call and a local operator is on the way.</p>
+
+    <h2>The short version</h2>
+    <p>Get off the road, turn on your hazards, stay safe, and call. A local tow operator covering Brentwood and the nearby East County towns can handle the rest, 24 hours a day.</p>
+  </div></div></section>
+
+  <section class="callband"><div class="wrap">
+    <h2>Broken down right now?</h2>
+    <p>One call connects you with a local tow operator across Brentwood and East County, day or night.</p>
+    <a class="btn btn-call btn-lg" href={tel}><svg><use href="#i-phone"/></svg> Call {SITE.phoneDisplay}</a>
+  </div></section>
+</Base>
