@@ -1,6 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import Scene from "../components/Scene.astro";
 import { SITE, SERVICES, AREAS, NEIGHBORHOODS, CORRIDORS, itemListNode, faqNode } from "../lib/site.js";
 const tel = "tel:" + SITE.phoneTel;
 const faqs = [
@@ -115,7 +114,7 @@ const schema = [itemListNode(SERVICES), faqNode(faqs)];
         <p>Every job is handled by a licensed and insured local operator, with an upfront estimate before any truck rolls. No pressure, no runaround, just a straight answer and a tow truck on the way.</p>
         <a class="btn btn-wine btn-lg" href="/about-garland-tow-truck-company/">More about us <svg style="width:1.1em;height:1.1em;fill:none;stroke:currentColor"><use href="#i-arrow"/></svg></a>
       </div>
-      <div class="media"><Scene label="Brentwood, CA" /></div>
+      <div class="media"><img src="/images/hero-recovery.webp" alt="Flatbed tow truck loading a sedan on a quiet Brentwood, CA street at golden hour" width="1200" height="675" loading="lazy" /></div>
     </div>
   </div></section>
 
