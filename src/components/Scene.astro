@@ -1,0 +1,57 @@
+---
+// East County brand scene: Mount Diablo ridgeline, orchard fields, a road, and a flatbed tow truck.
+// Image-light, no people and no readable text by construction.
+const { label = "" } = Astro.props;
+---
+<div class="scene">
+  <svg viewBox="0 0 1200 675" preserveAspectRatio="xMidYMid slice" role="img" aria-label={"Stylized Brentwood, CA landscape with Mount Diablo and a flatbed tow truck" + (label ? ", " + label : "")}>
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#CBDCDC"/>
+        <stop offset="0.62" stop-color="#E7E0CC"/>
+        <stop offset="1" stop-color="#F2E9D4"/>
+      </linearGradient>
+      <linearGradient id="road" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#6E3A30"/>
+        <stop offset="1" stop-color="#7A2932"/>
+      </linearGradient>
+    </defs>
+    <rect width="1200" height="675" fill="url(#sky)"/>
+    <!-- sun -->
+    <circle cx="958" cy="150" r="58" fill="#D9A638" opacity="0.92"/>
+    <circle cx="958" cy="150" r="58" fill="none" stroke="#C2871F" stroke-width="2" opacity="0.5"/>
+    <!-- far ridge: Mount Diablo -->
+    <path d="M0 330 L150 300 L300 322 L470 250 L520 214 L575 256 L760 300 L900 268 L1050 300 L1200 286 L1200 420 L0 420 Z" fill="#7E8A66"/>
+    <path d="M470 250 L520 214 L575 256 L540 268 L500 268 Z" fill="#5E6B39"/>
+    <!-- mid hills -->
+    <path d="M0 392 L220 360 L430 388 L660 356 L900 392 L1200 366 L1200 470 L0 470 Z" fill="#62713E"/>
+    <!-- orchard fields foreground -->
+    <rect x="0" y="452" width="1200" height="223" fill="#8E7B3F"/>
+    <g stroke="#6E5E2E" stroke-width="3" opacity="0.55">
+      <path d="M-40 470 L260 675"/><path d="M120 470 L460 675"/><path d="M280 470 L660 675"/><path d="M440 470 L860 675"/><path d="M600 470 L1060 675"/><path d="M760 470 L1240 675"/><path d="M920 470 L1400 675"/>
+    </g>
+    <g stroke="#A6924B" stroke-width="2" opacity="0.5">
+      <path d="M0 506 L1200 506"/><path d="M0 556 L1200 556"/><path d="M0 612 L1200 612"/>
+    </g>
+    <!-- road -->
+    <path d="M0 560 L1200 470 L1200 540 L0 640 Z" fill="url(#road)"/>
+    <g stroke="#D9A638" stroke-width="6" stroke-dasharray="34 30" opacity="0.92"><path d="M20 596 L1190 506"/></g>
+    <!-- flatbed tow truck silhouette -->
+    <g transform="translate(470 392)">
+      <!-- flatbed deck -->
+      <path d="M8 84 L196 84 L196 64 L150 64 L150 40 L96 40 L72 64 L8 64 Z" fill="#3A2A24"/>
+      <!-- cab -->
+      <path d="M8 64 L8 26 L40 26 L56 48 L56 64 Z" fill="#7A2932"/>
+      <rect x="14" y="32" width="22" height="16" rx="2" fill="#CBDCDC" opacity="0.85"/>
+      <!-- bed accent -->
+      <rect x="74" y="60" width="120" height="6" fill="#C2871F"/>
+      <!-- loaded car on bed -->
+      <path d="M92 40 L150 40 L150 30 L138 18 L108 18 L96 30 Z" fill="#93333D"/>
+      <rect x="104" y="22" width="34" height="10" rx="2" fill="#CBDCDC" opacity="0.7"/>
+      <!-- wheels -->
+      <circle cx="44" cy="92" r="15" fill="#231F1A"/><circle cx="44" cy="92" r="6" fill="#5E574C"/>
+      <circle cx="150" cy="92" r="15" fill="#231F1A"/><circle cx="150" cy="92" r="6" fill="#5E574C"/>
+    </g>
+  </svg>
+  {label && <span class="scene-tag">{label}</span>}
+</div>
